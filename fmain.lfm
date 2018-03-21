@@ -1,0 +1,87 @@
+object frmMain: TfrmMain
+  Left = 365
+  Height = 321
+  Top = 157
+  Width = 532
+  Caption = 'xlsx Cracker'
+  ClientHeight = 321
+  ClientWidth = 532
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  LCLVersion = '1.6.0.4'
+  object sb: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 298
+    Width = 532
+    Panels = <>
+  end
+  object GroupBox1: TGroupBox
+    Left = 0
+    Height = 76
+    Top = 0
+    Width = 532
+    Align = alTop
+    Caption = 'Select a file'
+    ClientHeight = 56
+    ClientWidth = 528
+    TabOrder = 1
+    object edtFilename: TEdit
+      Left = 4
+      Height = 24
+      Top = 0
+      Width = 520
+      Anchors = [akTop, akLeft, akRight, akBottom]
+      ReadOnly = True
+      TabOrder = 0
+    end
+    object Button1: TButton
+      Left = 4
+      Height = 25
+      Top = 28
+      Width = 75
+      Caption = 'Select'
+      OnClick = Button1Click
+      TabOrder = 1
+    end
+    object Button2: TButton
+      Left = 364
+      Height = 25
+      Top = 28
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Crack'
+      OnClick = Button2Click
+      TabOrder = 2
+    end
+    object btnProtect: TButton
+      Left = 448
+      Height = 25
+      Top = 28
+      Width = 75
+      Anchors = [akTop, akRight]
+      Caption = 'Protect'
+      Enabled = False
+      OnClick = btnProtectClick
+      TabOrder = 3
+    end
+  end
+  object mmo: TMemo
+    Left = 0
+    Height = 222
+    Top = 76
+    Width = 532
+    Align = alClient
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object od: TOpenDialog
+    Title = 'Select a file'
+    DefaultExt = '.*.xlsx'
+    Filter = 'Excel files (*.xlsx)|*.xlsx'
+    InitialDir = 'C:\'
+    left = 16
+    top = 256
+  end
+end
