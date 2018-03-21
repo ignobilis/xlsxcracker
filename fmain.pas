@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  StdCtrls, uxlsx;
+  StdCtrls, Menus, uxlsx;
 
 type
 
@@ -18,6 +18,10 @@ type
     btnProtect: TButton;
     edtFilename: TEdit;
     GroupBox1: TGroupBox;
+    MenuItem1: TMenuItem;
+    MenuItem2: TMenuItem;
+    MenuItem3: TMenuItem;
+    mnu: TMainMenu;
     mmo: TMemo;
     od: TOpenDialog;
     sb: TStatusBar;
@@ -26,6 +30,8 @@ type
     procedure Button2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
+    procedure MenuItem2Click(Sender: TObject);
+    procedure MenuItem3Click(Sender: TObject);
   private
     { private declarations }
   public
@@ -37,6 +43,9 @@ var
   xlsxCracker: TxlsxCracker;
 
 implementation
+
+uses
+  fabout;
 
 {$R *.lfm}
 
@@ -76,6 +85,16 @@ end;
 procedure TfrmMain.FormDestroy(Sender: TObject);
 begin
   xlsxCracker.Free;
+end;
+
+procedure TfrmMain.MenuItem2Click(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmMain.MenuItem3Click(Sender: TObject);
+begin
+  frmAbout.ShowModal;
 end;
 
 end.

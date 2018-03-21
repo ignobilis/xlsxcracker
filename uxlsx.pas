@@ -170,6 +170,7 @@ begin
     CopyFile(FTempFileDir + '\_\' + FCrackedFilename, FFileDir + '\' + FCrackedFilename)
   else
     CopyFile(FTempFileDir + '\_\' + FProtectedFilename, FFileDir + '\' + FProtectedFilename);
+  Log('Deleting temporary files');
   DeleteDirectory(FTempFileDir, False);
   if (AProcessType = ptCrack) then
     Log('Cracking complete')
