@@ -42,6 +42,10 @@ const
   ReadSQL = 'SELECT xml FROM data WHERE filename = ''%s'' AND sheetname = ''%s'';';
   CountSQL = 'SELECT count(*) AS cnt FROM data WHERE filename = ''%s'';';
 
+function DoubleQuotedString(s: String): String;
+begin
+  Result := StringReplace(s, '''', '''''', [rfReplaceAll]);
+end;
 
 procedure TSQLiteDAO.Exec(ASQL: String);
 begin
@@ -77,6 +81,8 @@ end;
 
 procedure TSQLiteDAO.Write(AFilename, ASheetName, AXML: String);
 begin
+  AFilename := DoubleQuotedString(AFilename);
+  ASheetName := DoubleQuotedString(ASheetName);
   Exec(Format(WriteSQL, [AFilename, ASheetName, AXML]));
 end;
 
@@ -85,6 +91,8 @@ var
   q: TSQLQuery;
 begin
   Result := '';
+  AFilename := DoubleQuotedString(AFilename);
+  ASheetName := DoubleQuotedString(ASheetName);
   q := TSQLQuery.Create(Nil);
   try
     q.DataBase := FConn;
@@ -105,6 +113,7 @@ var
   q: TSQLQuery;
 begin
   Result := 0;
+  AFilename := DoubleQuotedString(AFilename);
   q := TSQLQuery.Create(Nil);
   try
     q.DataBase := FConn;

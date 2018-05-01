@@ -112,12 +112,12 @@ object frmAbout: TfrmAbout
     Height = 360
     Top = 12
     Width = 347
-    Caption = 'License: The MIT License'#13#10#13#10'Copyright 2018 https://github.com/ignobilis'#13#10#13#10'Permission is hereby granted, free of charge, to any person '#13#10'obtaining a copy of this software and associated documentation '#13#10'files (the "Software"), to deal in the Software without restriction, '#13#10'including without limitation the rights to use, copy, modify, '#13#10'merge, publish, distribute, sublicense, and/or sell copies of the '#13#10'Software, and to permit persons to whom the Software is '#13#10'furnished to do so, subject to the following conditions:'#13#10#13#10'The above copyright notice and this permission notice shall be '#13#10'included in all copies or substantial portions of the Software.'#13#10#13#10'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF '#13#10'ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED '#13#10'TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A '#13#10'PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT '#13#10'SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR '#13#10'ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN '#13#10'ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, '#13#10'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE '#13#10'OR OTHER DEALINGS IN THE SOFTWARE.'
+    Caption = 'This software is provided under "The MIT License":'#13#10#13#10'Copyright 2018 https://github.com/ignobilis'#13#10#13#10'Permission is hereby granted, free of charge, to any person '#13#10'obtaining a copy of this software and associated documentation '#13#10'files (the "Software"), to deal in the Software without restriction, '#13#10'including without limitation the rights to use, copy, modify, '#13#10'merge, publish, distribute, sublicense, and/or sell copies of the '#13#10'Software, and to permit persons to whom the Software is '#13#10'furnished to do so, subject to the following conditions:'#13#10#13#10'The above copyright notice and this permission notice shall be '#13#10'included in all copies or substantial portions of the Software.'#13#10#13#10'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF '#13#10'ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED '#13#10'TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A '#13#10'PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT '#13#10'SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR '#13#10'ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN '#13#10'ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, '#13#10'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE '#13#10'OR OTHER DEALINGS IN THE SOFTWARE.'
     ParentColor = False
     WordWrap = True
   end
   object Button1: TButton
-    Left = 196
+    Left = 204
     Height = 25
     Top = 380
     Width = 75
