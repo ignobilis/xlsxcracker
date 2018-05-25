@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ExtCtrls,
-  StdCtrls, fileinfo;
+  StdCtrls, uVersionInfo;
 
 type
 
@@ -44,15 +44,10 @@ begin
 end;
 
 procedure TfrmAbout.FormCreate(Sender: TObject);
-var
-  fi: TFileVersionInfo;
 begin
   try
-    fi := TFileVersionInfo.Create(nil);
-    fi.ReadFileInfo;
-    lblVersion.Caption := Format('Version %s', [fi.VersionStrings.Values['FileVersion']]);
+    lblVersion.Caption := ResourceVersionInfo;
   finally
-    fi.Free;
   end
 end;
 

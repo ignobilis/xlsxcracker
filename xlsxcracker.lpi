@@ -49,6 +49,7 @@
         <ComponentName Value="frmMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fmain"/>
       </Unit1>
       <Unit2>
         <Filename Value="uxlsx.pas"/>
@@ -64,6 +65,7 @@
         <ComponentName Value="frmAbout"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <UnitName Value="fabout"/>
       </Unit4>
     </Units>
   </ProjectOptions>
