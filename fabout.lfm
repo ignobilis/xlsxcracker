@@ -1,15 +1,16 @@
 object frmAbout: TfrmAbout
-  Left = 330
-  Height = 414
-  Top = 158
-  Width = 521
+  Left = 599
+  Height = 296
+  Top = 195
+  Width = 527
   BorderStyle = bsDialog
   Caption = 'About'
-  ClientHeight = 414
-  ClientWidth = 521
+  ClientHeight = 296
+  ClientWidth = 527
+  Font.Name = 'FreeSans'
   OnCreate = FormCreate
   Position = poMainFormCenter
-  LCLVersion = '1.4.0.3'
+  LCLVersion = '1.8.4.0'
   object Image1: TImage
     Left = 36
     Height = 38
@@ -93,36 +94,44 @@ object frmAbout: TfrmAbout
     Left = 24
     Height = 15
     Top = 60
-    Width = 73
+    Width = 69
     Caption = 'xlsx Cracker'
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
   end
   object lblVersion: TLabel
     Left = 20
     Height = 15
-    Top = 84
+    Top = 80
     Width = 75
     Alignment = taCenter
     AutoSize = False
     Caption = 'Version 0.0.0.0'
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 112
-    Height = 360
+    Height = 240
     Top = 12
     Width = 395
-    Caption = 'This software is provided under "The MIT License":'#13#10#13#10'Copyright 2018 https://github.com/ignobilis'#13#10#13#10'Permission is hereby granted, free of charge, to any person '#13#10'obtaining a copy of this software and associated documentation '#13#10'files (the "Software"), to deal in the Software without restriction, '#13#10'including without limitation the rights to use, copy, modify, '#13#10'merge, publish, distribute, sublicense, and/or sell copies of the '#13#10'Software, and to permit persons to whom the Software is '#13#10'furnished to do so, subject to the following conditions:'#13#10#13#10'The above copyright notice and this permission notice shall be '#13#10'included in all copies or substantial portions of the Software.'#13#10#13#10'THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF '#13#10'ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED '#13#10'TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A '#13#10'PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT '#13#10'SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR '#13#10'ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN '#13#10'ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, '#13#10'OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE '#13#10'OR OTHER DEALINGS IN THE SOFTWARE.'
+    Caption = 'This software is released under "The GPL Version 3":'#13#10#13#10'Copyright 2018 https://github.com/ignobilis'#13#10#13#10'This program is free software: you can redistribute it and/or modify'#10'it under the terms of the GNU General Public License as published by'#10'the Free Software Foundation, either version 3 of the License, or'#10'(at your option) any later version.'#10#10'This program is distributed in the hope that it will be useful,'#10'but WITHOUT ANY WARRANTY; without even the implied warranty of'#10'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'#10'See the GNU General Public License for more details.'#10#10'You should have received a copy of the GNU General Public License'#10'along with this program.  If not, see <http://www.gnu.org/licenses/>.'
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
     WordWrap = True
   end
   object Button1: TButton
     Left = 232
     Height = 25
-    Top = 380
+    Top = 260
     Width = 75
     Caption = 'Close'
+    Font.Name = 'FreeSans'
     OnClick = Button1Click
+    ParentFont = False
     TabOrder = 0
   end
 end
