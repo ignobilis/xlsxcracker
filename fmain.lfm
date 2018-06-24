@@ -6,7 +6,7 @@ object frmMain: TfrmMain
   Caption = 'xlsx Cracker'
   ClientHeight = 293
   ClientWidth = 532
-  Font.Height = -13
+  Font.Height = -12
   Font.Name = 'FreeSans'
   Menu = mnu
   OnCreate = FormCreate
@@ -27,12 +27,12 @@ object frmMain: TfrmMain
     Width = 532
     Align = alTop
     Caption = 'Select a file'
-    ClientHeight = 60
+    ClientHeight = 62
     ClientWidth = 530
     TabOrder = 1
     object edtFilename: TEdit
       Left = 4
-      Height = 28
+      Height = 30
       Top = 0
       Width = 522
       Anchors = [akTop, akLeft, akRight, akBottom]
