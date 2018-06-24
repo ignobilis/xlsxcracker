@@ -6,6 +6,7 @@ object frmMain: TfrmMain
   Caption = 'xlsx Cracker'
   ClientHeight = 293
   ClientWidth = 532
+  Font.Height = -13
   Font.Name = 'FreeSans'
   Menu = mnu
   OnCreate = FormCreate
