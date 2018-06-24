@@ -93,11 +93,14 @@ object frmAbout: TfrmAbout
   end
   object Label1: TLabel
     Left = 24
-    Height = 15
+    Height = 13
     Top = 60
-    Width = 69
+    Width = 66
     Caption = 'xlsx Cracker'
+    Font.Height = -12
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
   end
   object lblVersion: TLabel
     Left = 20
@@ -107,15 +110,22 @@ object frmAbout: TfrmAbout
     Alignment = taCenter
     AutoSize = False
     Caption = 'Version 0.0.0.0'
+    Font.Height = -12
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 112
     Height = 240
     Top = 12
-    Width = 395
+    Width = 408
+    AutoSize = False
     Caption = 'This software is released under "The GPL Version 3":'#13#10#13#10'Copyright 2018 https://github.com/ignobilis'#13#10#13#10'This program is free software: you can redistribute it and/or modify'#10'it under the terms of the GNU General Public License as published by'#10'the Free Software Foundation, either version 3 of the License, or'#10'(at your option) any later version.'#10#10'This program is distributed in the hope that it will be useful,'#10'but WITHOUT ANY WARRANTY; without even the implied warranty of'#10'MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.'#10'See the GNU General Public License for more details.'#10#10'You should have received a copy of the GNU General Public License'#10'along with this program.  If not, see <http://www.gnu.org/licenses/>.'
+    Font.Height = -12
+    Font.Name = 'FreeSans'
     ParentColor = False
+    ParentFont = False
     WordWrap = True
   end
   object Button1: TButton
@@ -124,7 +134,10 @@ object frmAbout: TfrmAbout
     Top = 260
     Width = 75
     Caption = 'Close'
+    Font.Height = -12
+    Font.Name = 'FreeSans'
     OnClick = Button1Click
+    ParentFont = False
     TabOrder = 0
   end
 end
