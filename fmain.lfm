@@ -1,11 +1,11 @@
 object frmMain: TfrmMain
   Left = 512
-  Height = 321
+  Height = 374
   Top = 347
-  Width = 532
+  Width = 537
   Caption = 'xlsx Cracker'
-  ClientHeight = 293
-  ClientWidth = 532
+  ClientHeight = 346
+  ClientWidth = 537
   Font.Height = -12
   Font.Name = 'FreeSans'
   Menu = mnu
@@ -16,42 +16,42 @@ object frmMain: TfrmMain
   object sb: TStatusBar
     Left = 0
     Height = 22
-    Top = 271
-    Width = 532
+    Top = 324
+    Width = 537
     Panels = <>
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 76
+    Height = 84
     Top = 0
-    Width = 532
+    Width = 537
     Align = alTop
     Caption = 'Select a file'
-    ClientHeight = 62
-    ClientWidth = 530
+    ClientHeight = 70
+    ClientWidth = 535
     TabOrder = 1
     object edtFilename: TEdit
       Left = 4
       Height = 30
-      Top = 0
-      Width = 522
-      Anchors = [akTop, akLeft, akRight, akBottom]
+      Top = 4
+      Width = 527
+      Anchors = [akTop, akLeft, akRight]
       ReadOnly = True
       TabOrder = 0
     end
     object Button1: TButton
       Left = 4
       Height = 25
-      Top = 32
+      Top = 40
       Width = 75
       Caption = 'Select'
       OnClick = Button1Click
       TabOrder = 1
     end
     object Button2: TButton
-      Left = 364
+      Left = 369
       Height = 25
-      Top = 32
+      Top = 40
       Width = 75
       Anchors = [akTop, akRight]
       Caption = 'Crack'
@@ -59,9 +59,9 @@ object frmMain: TfrmMain
       TabOrder = 2
     end
     object btnProtect: TButton
-      Left = 448
+      Left = 453
       Height = 25
-      Top = 32
+      Top = 40
       Width = 75
       Anchors = [akTop, akRight]
       Caption = 'Protect'
@@ -72,9 +72,9 @@ object frmMain: TfrmMain
   end
   object mmo: TMemo
     Left = 0
-    Height = 195
-    Top = 76
-    Width = 532
+    Height = 240
+    Top = 84
+    Width = 537
     Align = alClient
     ReadOnly = True
     ScrollBars = ssVertical
