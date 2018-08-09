@@ -1,7 +1,7 @@
 object frmAbout: TfrmAbout
-  Left = 599
+  Left = 379
   Height = 296
-  Top = 195
+  Top = 225
   Width = 527
   BorderStyle = bsDialog
   Caption = 'About'
@@ -93,7 +93,7 @@ object frmAbout: TfrmAbout
   end
   object Label1: TLabel
     Left = 24
-    Height = 13
+    Height = 15
     Top = 60
     Width = 66
     Caption = 'xlsx Cracker'

@@ -17,6 +17,7 @@ type
   private
     FCanProtect: Boolean;
     FRunPath: String;
+    FTempPath: String;
     FFilepath: String;
     FFileDir: String;
     FTempFileDir: String;
@@ -26,6 +27,7 @@ type
     FMmo: TMemo;
     FDAO: TSQLiteDAO;
     FXML: String;
+    function GetPathFromReg(AFolder: String): String;
     procedure SetFilepath(AValue: String);
     procedure Log(s: String);
     procedure ClearLog;
@@ -50,15 +52,29 @@ type
 implementation
 
 uses
-  FileUtil, Zipper, Forms;
+  FileUtil, Zipper, Forms, Registry;
 
 const
-  TempFileDir = 'C:\Temp';
   TagSheetProtection = '<sheetProtection';
   TagClose = '/>';
   TagSheetData = '</sheetData>';
 
 { TxlsxCracker }
+
+function TxlsxCracker.GetPathFromReg(AFolder: String): String;
+var
+  Registry: TRegistry;
+begin
+  Result := ExtractFileDir(Application.ExeName);
+  Registry := TRegistry.Create;
+  try
+    Registry.RootKey := HKEY_LOCAL_MACHINE;
+    if Registry.OpenKeyReadOnly('\SOFTWARE\ignobilis\xlsxcracker') then
+      Result := Registry.ReadString(AFolder);
+  finally
+    Registry.Free;
+  end;
+end;
 
 procedure TxlsxCracker.SetFilepath(AValue: String);
 var
@@ -77,7 +93,7 @@ begin
       ext := ExtractFileExt(FFilename);
       FCrackedFilename := StringReplace(FFilename, ext, '', []) + '_Cracked' + ext;
       FProtectedFilename := StringReplace(FFilename, ext, '', []) + '_Protected' + ext;
-      FTempFileDir := TempFileDir + '\' + FFileName + '_';
+      FTempFileDir := FTempPath + FFileName + '_';
       cnt := FDAO.Count(FFilename);
       FCanProtect := cnt > 0;
     end
@@ -282,7 +298,8 @@ end;
 constructor TxlsxCracker.Create(mmo: TMemo);
 begin
   FMmo := mmo;
-  FRunPath := ExtractFileDir(Application.ExeName);
+  FRunPath := GetPathFromReg('datafolder');
+  FTempPath := GetTempDir(False);
   FDAO := TSQLiteDAO.Create(FRunPath + '\xlsx.dat');
   FXML := '';
 end;
